@@ -1,0 +1,647 @@
+#main {
+    width: 700px;
+    height: 500px;
+    position: relative;
+    border: 2px solid #ddd;
+    margin: 0 auto;
+    background-color: #ddd;
+    background-image: url(gradi.gif);
+    background-size: 100% 100%;
+}
+.txt{
+    background-color: #ddd;
+    border: 3px solid #aaa;
+    color: #777;
+    font-size:20px;
+    font-family: Arial Bold;
+    padding: 0 15px 5px 15px;
+    position: absolute;
+    top: 20px;
+    user-select: none;
+    cursor: pointer;
+    left: 20px;
+    transition-duration: 0.5s;
+}
+#pointers{
+    cursor: no-drop;
+    display: none;
+}
+p{
+    text-align: center;
+}
+.ball{
+    background-size: 100% 100%;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 1;
+    transform: scale(1);
+    background-image: none;
+    transition-property: scale opacity;
+    transition-duration: 0.1s;
+}
+.tball{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    z-index: 10;
+    background-image: url(rainb.gif);
+}
+#GameOver{
+    width: 300px;
+    height: 230px;
+    display: none;
+    left: 200px;
+    top: 150px;
+    background-image: url(gradient.gif);
+    background-size: 100% 100%;
+    z-index: 7777;
+}
+#counter{
+    position: relative;
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Courier New';
+}
+#gr{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Comic Sans Ms";
+}
+#retry{
+    text-align: center;
+    font-family: "Comic Sans Ms";
+    top:195px;
+    left:120px;
+    border: 1px solid;
+    transition-duration: 0.4s;
+}
+#retry:hover{
+    background-color: rgb(0, 255, 170);
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+    scale: 1.1;
+}
+#square{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    border: 1px solid #fff;
+    cursor: pointer;
+    z-index: 5;
+}
+#lives{
+    left:550px;
+    z-index: 40;
+    cursor: no-drop;
+    display: none;
+}
+#instructor{
+    left:200px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Gill Sans MT';
+    transition-property: box-shadow background-color;
+    transition-duration: 0.4s;
+}
+#instructor:hover{
+    scale: 1.1;
+    background-color: rgb(0, 255, 102);
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+}
+#back{
+    display: none;
+    transition-property: box-shadow background-color;
+    transition-duration: 0.4s;
+}
+#back:hover{
+    scale: 1.1;
+    background-color: aqua;
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+}
+#info{
+    position: absolute;
+    width:700px;
+    text-align: center;
+    top:55px;
+    left:50px;
+    display: none;
+}
+#anr{
+    cursor: none;
+    position: absolute;
+    top:580px;
+    left: 520px;
+    width:500px;
+    text-align: center;
+    font-family: "Comic Sans Ms";
+}
+body{
+    background-image: url(R.jpg);
+    user-select: none;
+    background-repeat: no-repeat;
+}
+#miss{
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    z-index: 2;
+    cursor: pointer;
+    display: none;
+}
+#wins{
+    position: relative;
+    top:90px;
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Comic Sans Ms';
+}
+#diff{
+    font-family: 'Algerian';
+    top:60px;
+    left:200px;
+    background-image: url(anim.gif);
+}
+#easy{
+    position: absolute;
+    display: none;
+    z-index: 20;
+    left: 300px;
+    font-size: 30px;
+    font-family: 'Comic Sans Ms';
+}
+#normal {
+    position: absolute;
+    display: none;
+    z-index: 20;
+    left: 300px;
+    font-size: 30px;
+    top:100px;
+    font-family: 'Comic Sans Ms';
+}
+#hard {
+    position: absolute;
+    display: none;
+    z-index: 20;
+    left: 300px;
+    font-size: 30px;
+    top:200px;
+    font-family:'Comic Sans Ms';
+}
+.achie{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    background-size: 100% 100%;
+    cursor: pointer;
+    display: none;
+}
+#bronze{
+    background-image: url(R.png);
+    width: 140px;
+    bottom: 450px;
+    transition-duration: 0.4s;
+    
+}
+#silver{
+    background-image: url(Rin.png);
+    bottom: 300px;
+    transition-duration: 0.4s;
+}
+#gold{
+    background-image: url(Ri.png);
+    bottom: 150px;
+    transition-duration: 0.4s;
+}
+#achsate{
+    font-family: 'Franklin Gothic Medium';
+    left:200px;
+    top:100px;
+    background-image: url(giphy.gif);
+    display: none;
+}
+#stoper{
+    position: absolute;
+        width: 700px;
+        height: 500px;
+        z-index: 6666;
+        cursor: pointer;
+        display: none;
+        cursor: default;
+}
+#timer{
+    top:500px;
+    left:310px;
+    display: none;
+}
+#infi{
+    position: absolute;
+    text-align: center;
+    right: 50px;
+    font-size: 25px;
+    font-family: 'Comic Sans Ms';
+    display: none;
+    top:200px;
+}
+#music{
+    font-family: 'Comic Sans Ms';
+    font-weight: bold;
+    font-size: 30px;
+    left:250px;
+    top:100px;
+    transition-property: box-shadow background-color;
+    transition-duration: 0.4s;
+    display: none;
+}
+#music:hover{
+    scale: 1.1;
+    background-color: red;
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+}
+#bronze:hover{
+    scale: 1.1;
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+}
+#silver:hover{
+    scale: 1.1;
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+}
+#gold:hover{
+    scale: 1.1;
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+}
+#settings{
+    font-family: 'Comic Sans Ms';
+    font-weight: bold;
+    transition-property: box-shadow background-color;
+    transition-duration: 0.4s;
+}
+#settings:hover{
+    scale: 1.1;
+    background-color: rgb(55, 255, 0);
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+}
+#control{
+    font-family: 'Comic Sans Ms';
+    font-weight: bold;
+    font-size: 30px;
+    left:175px;
+    top:200px;
+    transition-property: box-shadow background-color;
+    transition-duration: 0.4s;
+    display: none;
+}
+#control:hover{
+    scale: 1.1;
+    background-color: rgb(255, 0, 119);
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+}
+#knopka{
+    font-family: 'Comic Sans Ms';
+    transition-property: scale box-shadow background-color;
+    transition-duration: 0.4s; 
+}
+#knopka:hover{
+    scale: 1.1;
+    background-color: rgb(0, 136, 255);
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+#cases{
+    left:1110px;
+    z-index: 7328327;
+    width: 100px;
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Comic Sans Ms';
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+#cases:hover{
+    scale: 1.1;
+    background-color: rgb(255, 0, 255);
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+.case{
+    width:150px;
+    height:110px;
+    background-size: 100% 100%;
+    cursor: pointer;
+    position: absolute;
+    display: none;
+    transition-duration: 0.5s;
+}
+#case1{
+    background-image: url(Untitled-1.png);
+    left: 200px;
+    top: 200px;
+    opacity: 0;
+}
+#cost1{
+    position: relative;
+    top: 120px;
+    width: 100px;
+    cursor: default;
+}
+#nomoney{
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    font-size: 25px;
+    opacity: 0;
+    transition-duration: 0.5s;
+    display: none;
+}
+#roulettee{
+    width: 150px;
+    height: 150px;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 250px;
+    top:200px;
+    display: none;
+}
+#nameo{
+    top:370px;
+    left: 260px;
+    width:100px;
+    cursor: default;
+    display: none;
+}
+#rarity{
+    cursor: default;
+    top: 250px;
+    z-index:121291381839913;
+    display: none;
+}
+#openedcase{
+    width: 300px;
+    height: 300px;
+    display: none;
+    left: 200px;
+    top: 150px;
+    background-image: url(stars.gif);
+    background-size: 100% 100%;
+    z-index: 40;
+    cursor: default;
+}
+#lotty{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Comic Sans Ms";
+}
+#nameo1{
+    font-weight: 20px;
+    font-weight: bold;
+    font-family: "Comic Sans Ms";
+}
+#prize{
+    position: relative;
+    width: 100px;
+    height: 120px;
+    background-color: red;
+    left:100px;
+    cursor: default;
+    background-size: 100% 100%;
+}
+#rarity1{
+    position: relative;
+    right:100px;
+    bottom: 100px;
+    font-weight: bold;
+    font-family: "Comic Sans Ms";
+}
+#equip{
+    top:260px;
+}
+#backi{
+    top: 260px;
+    left: 220px;
+}
+#backi:hover{
+    scale: 1.1;
+    background-color: aqua;
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+}
+#equip:hover{
+    scale: 1.1;
+    background-color: aqua;
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+}
+#skins{
+    top:500px;
+    left:250px;
+}
+#skins:hover{
+    scale: 1.1;
+    background-color: aqua;
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+}
+.skin{
+    position: absolute;
+    background-size: 100% 100%;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+#Smthweird{
+    background-image: url(Untitled-2.png);
+    left:50px;
+}
+#Sansonjudge{
+    background-image: url(sans.jpg);
+    left:200px;
+}
+#ЗСУplane{
+    background-image: url(Untitled-3.png);
+    left:350px;
+}
+#catalog{
+    position: absolute;
+    width: 650px;
+    height: 250px;
+    top:100px;
+    overflow: scroll;
+    left:25px;
+    display: none;
+}
+#skindesc{
+    position: absolute;
+    width: 600px;
+    top:400px;
+    left:25px;
+    font-weight: bold;
+    font-family: "Comic Sans Ms";
+    display: none;
+}
+#resetskin{
+    position: absolute;
+    top:450px;
+    left:20px;
+    display: none;
+}
+#money{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position: absolute;
+    top:450px;
+    left:550px;
+    display: none;
+}
+#Updates{
+    top:100px;
+    left:1110px;
+    font-family: 'Comic Sans Ms';
+    font-weight: bold;
+}
+#Updates:hover{
+    scale: 1.1;
+    background-color: rgb(0, 255, 55);
+    box-shadow: 0 0 10px rgba(0, 5, 2, 0.5), 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
+}
+#infk{
+        position: absolute;
+        width:550px;
+        text-align: center;
+        top:55px;
+        left:50px;
+        display: none;
+        cursor: url(Untitled-3.png);
+}
+#animation{
+        position: absolute;
+        top:150px;
+        width: 700px;
+        height: 300px;
+        display: none;
+		z-index: 32340;
+        background-size: 100% 100%;
+        cursor: pointer;
+        background-image: url(ronb.gif);
+}
+#admin{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 650px;
+    display: none;
+}
+#Hmmmm{
+    position: absolute;
+    left: 250px;
+    top:350px;
+    font-family: 'Comic Sans Ms';
+    font-size: 15px;
+    display: none;
+}
+#Z{
+    position: absolute;
+    left: 250px;
+    top:300px;
+    font-family: 'Algerian';
+    font-size: 15px;
+    display: none;
+}
+#top{
+    color: red;
+    font-family: 'Comic Sans Ms';
+    position: relative;
+    top: 150px;
+}
+.inblock {
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+}
+#InBlock{
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    display: none;
+    position: relative;
+}
+.coef{
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    font-size: 20px;
+}
+#go{
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    font-weight: bold;
+    color: #777;
+    cursor: pointer;
+}
+#er{
+    font-family: 'French Script MT';
+}
+#codes{
+    font-family: 'Algerian';
+    left:1120px;
+    top:150px;
+}
+#Hrrr{
+    position: absolute;
+    left: 250px;
+    top:350px;
+    font-family: 'Comic Sans Ms';
+    font-size: 15px;
+    display: none;
+}
+#ZI{
+    position: absolute;
+    left: 250px;
+    top:300px;
+    font-family: 'Algerian';
+    font-size: 15px;
+    display: none;
+}
+#partcode{
+    position: absolute;
+    left: 250px;
+    top:400px;
+    font-family: 'Comic Sans Ms';
+    font-size: 15px;
+    display: none;
+}
+#Mainer{
+    position: relative;
+    margin: 0 auto;
+    height: 690px;
+    width: 1500px;;
+}
+#progress{
+    position: relative;
+    width: 150px;
+    left: 250px;
+    top: 200px;
+}
+#EE{
+	left:1420px;
+	font-family: 'Comic Sans Ms';
+}

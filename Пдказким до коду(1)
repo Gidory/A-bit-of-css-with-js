@@ -1,0 +1,2 @@
+oninput="this.value = this.value.toUpperCase();"- усі введені користувачем букви, символи будуть автоматично великими
+onfocus="if(this.value==this.defaultValue)this.value='';"-ящо користувач почне вводити текст в інпут, то текст який там був до цього зникне

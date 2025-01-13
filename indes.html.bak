@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Click-a-circle</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="Untitled-4.png">
+</head>
+
+<body>
+<div id="Mainer">
+    <div id="main">
+        <div id="case1" class="case">
+            <div id="cost1" class="txt">Cost: 500 points</div>
+        </div>
+            <div id="roulettee"></div>
+            <div id="nameo" class="txt">........</div>
+            <div id="rarity" class="txt">Common</div>
+        <div id="animation"></div>
+        <div id="InBlock" id="top">
+            <p>
+               MP=<input type="text" id="fi" name="a" class="coef" maxlength="5" value="Amount" onfocus="if(this.value==this.defaultValue)this.value='';">points
+            </p>
+            <p>
+               Wins=<input type="text" id="se" name="b" class="coef" maxlength="4" value="Amount" onfocus="if(this.value==this.defaultValue)this.value='';">
+            </p>
+            <p>
+                <div id="progress" class="txt">Reset progress?</div>
+            </p>
+        <p>
+            <input type="submit" id="go" name="go" value="Set variables">
+        </p>
+        <h1 id="er">Admin Console</h1>
+        </div>
+        <div id="admin"></div>
+        <div id="miss"></div>
+        <div id="stoper"></div>
+        <input type="text" id="Z" value="Enter password here" maxlength="4" onfocus="if(this.value==this.defaultValue)this.value='';">
+        <input type="submit" id="Hmmmm" value="Enter password">
+        <input type="text" id="ZI" value="Enter code here" maxlength="20" onfocus="if(this.value==this.defaultValue)this.value='';" oninput="this.value = this.value.toUpperCase();">
+        <input type="submit" id="Hrrr" value="Enter code">
+        <div id="partcode" class="txt">................</div>
+        <div id="nomoney" class="txt">You don`t have enough points or wins for case.</div> 
+        <div id="money" class="txt">MP: </div>
+        <div id="easy" class="txt">Easy</div>
+        <div id="normal" class="txt">Normal</div>
+        <div id="hard" class="txt">Hard</div>
+        <div class="txt" id="knopka">Почати гру</div>
+        <div class="txt" id="pointers">0</div>
+        <div class="txt" id="lives">Lives left: 5</div>
+        <div class="txt" id="back">&laquo; Back</div>
+        <div class="txt" id="info">
+            <p id="ENR">Rules and info</p>
+			<p>Правила та інформації</p>
+            <p>UA:Правила прості, тобі треба за 10 секунд натиснути на якнайбільше кружечків.
+                    За кожний кружечок ти отримуєш по 1 очку і якщо ви не зробите міс (при натисканні на порожню площу),
+                    ви збільшите свій комбо, щоб отримати більше балів, але коли ви натиснете на квадрат, ви втратите одне життя і все комбо,
+                    всього в тебе п'ять життів, втратиш їх всі і програєш. Також при натисканні на порожню територію ви втратите очки рівні вашому комбо,
+                    і все комбо.
+                    Ну це все удачі!</p>
+                    <p>EN:The rules are simple, you need to press on as many circles as possible in 10 seconds.
+                    For each circle you get 1 point and if you don`t miss(press on empty area) you will increase your combo so you
+                    will receive more points, but when you click on the square, you lose one life and all combo.
+                    You have five lives in total, if you lose them all you will lose. And if you will press on empty area you will also lose points equal to your combo,
+                    that's all good luck!</p>
+        </div>
+        <div id="infk" class="txt"></div>
+        <div class="txt" id="infi"></div>
+        <div class="txt" id="GameOver">
+            <p id="gr">GameOver</p>
+            <p id="count"></p>
+            <p id="answer"></p>
+            <div class="txt" id="retry">Retry</div>
+        </div>
+        <div id="openedcase" class="txt">
+            <p id="lotty">You got...</p>
+            <p id="nameo1">Someone</p>
+            <div id="prize"></div>
+            <p id="rarity1">Rare</p>
+            <div id="equip" class="txt">Equip it.</div>
+            <div id="backi" class="txt">&laquo; Back</div>
+        </div>
+        <div id="music" class="txt">Music: on</div>
+        <div id="control" class="txt">Game Controls: click</div>
+        <div id="catalog">
+        <div id="Smthweird" class="skin"></div>
+        <div id="Sansonjudge" class="skin"></div>
+        <div id="ЗСУplane" class="skin"></div>
+    </div>
+    <div id="skindesc" class="txt"></div>
+    <div id="resetskin" class="txt">Reset skin</div>
+    </div>
+    <div id="diff" class="txt">Difficulty</div>
+    <div class="txt" id="anr">Welcome to the game!</div>
+    <div class="txt" id="instructor">Rules and info.</div>
+    <div class="txt" id="counter">SE games were played.</div>
+    <div class="txt" id="wins">SE wins in total.</div>
+    <div id="achsate" class="txt">Reset game.</div>
+    <div id="bronze" class="achie"></div>
+    <div id="silver" class="achie"></div>
+    <div id="gold" class="achie"></div>
+    <div id="timer" class="txt">10</div>
+    <div id="settings" class="txt">Settings</div>
+    <div id="cases" class="txt">Cases</div>
+    <div id="skins" class="txt">&ast; Skins &ast;</div>
+    <div id="Updates" class="txt">Updates</div>
+    <div id="codes" class="txt">Codes</div>
+</div>
+    <script src="classic.js"></script>
+</body>
+
+</html>
